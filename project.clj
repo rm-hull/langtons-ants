@@ -8,8 +8,8 @@
                  [rm-hull/monet "0.1.2-SNAPSHOT"]]
   :cljsbuild {
     :builds [
-      {:source-path "src/"
-       :compiler {:output-to "public/js"
+      {:source-path "src/langtons-ants"
+       :compiler {:output-to "public/js/langtons-ants.js"
                   :optimizations :advanced
                   :externs ["externs/jquery-1.8.js" "externs/requestAnim.js"]
                   :print-input-delimiter true
