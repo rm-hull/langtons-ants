@@ -4,11 +4,12 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.5.0-beta1"]
                  [jayq "1.0.0"]
-                 [rm-hull/monet "0.1.2-SNAPSHOT"]]
+                 [rm-hull/monet "0.1.3-SNAPSHOT"]]
   :cljsbuild {
     :builds [
       {:source-path "src/ants"
        :compiler {:output-to "public/js/ants.js"
+                  ;:optimizations :whitespace
                   :optimizations :advanced
                   :externs ["externs/jquery-1.8.js" "externs/requestAnim.js"]
                   :print-input-delimiter true
