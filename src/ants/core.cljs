@@ -1,4 +1,4 @@
-(ns langtons-ants.core
+(ns ants.core
   (:use [monet.canvas :only [get-context stroke stroke-style stroke-cap begin-path close-path line-to move-to stroke-width]]
         [jayq.core :only [$ document-ready data attr hide]]))
 
@@ -12,6 +12,7 @@
   (fn []
     (let [canvas    ($ :canvas#world)
           ctx       (get-context (.get canvas 0) "2d")
+          cell-size 6
           [width height] (map #(quot % cell-size) (available-area))
           limit     (dec (* width height))]
       (-> canvas
