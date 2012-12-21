@@ -32,12 +32,14 @@
     (fill-style color)
     (rect { :x (* x scale) :y (* y scale) :w scale :h scale})))
 
-(defn black? [color]
-  (->> 
-    [:red :green :blue]
-    (map color)
-    (reduce +)
-    zero?))
+(def black? 
+  (memoize
+    (fn [color]
+      (->> 
+        [:red :green :blue]
+        (map color)
+        (reduce +)
+        zero?))))
 
 (defn toggle-previous! [state]
   (let [prev (:previous state)
