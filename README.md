@@ -14,6 +14,8 @@ after about 10,000 generations, a recurrent highway pattern breaks away
 from the main body.
 
 See http://langtons-ants.destructuring-bind.org for a running example.
+By default one ant is automatically created; Extra ants may be added
+by clicking on the canvas.
 
 Building and Running
 ====================
@@ -24,17 +26,14 @@ nominally deployed on Heroku), so Ruby and bundle are pre-requisites:
     $ bundle install
 
 The compiled javascript is already versioned in git, so start the 
-appserver and browse to [http://localhost:9292]
+appserver and browse to http://localhost:9292
 
     $ rackup
 
-By default one ant is automatically created; Extra ants may be added
-by clicking on the canvas.
-
 Editing Code
 ============
-Don't try to edit the javascript - is compiled from ClojureScript in
-`src/ants/core.cljs` using Leiningen with the lein-cljsbuild plugin:
+Don't try to edit the javascript - it is compiled from ClojureScript 
+in `src/ants/core.cljs` using Leiningen with the lein-cljsbuild plugin:
 
     $ lein cljsbuild clean
     $ lein cljsbuild auto
@@ -44,9 +43,9 @@ for the compilation phase to complete.
 
 Notes
 =====
-* Google Chrome 22.0.1229.94 does not yield the expected output, whereas
+* Chromium 22.0.1229.94 does not yield the expected output, whereas
   Firefox 20.0a1 does produce the breakout highways properly. This might 
-  be down to Chrome's implementation of _Canvas.getImageData()_.
+  be down to Chromium's implementation of _Canvas.getImageData()_.
 
 * Each ant is Turing complete, thus is capable of capable of universal 
   computation.
