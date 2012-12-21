@@ -14,7 +14,6 @@
                   :externs ["externs/jquery-1.8.js" "externs/requestAnim.js"]
                   :print-input-delimiter true
                   :pretty-print true}}]}
-  :hooks [leiningen.cljsbuild]
   :plugins [[lein-cljsbuild "0.2.10"]]
   :profiles {:dev {:dependencies [[vimclojure/server "2.3.6"]]}}
   :min-lein-version "2.0.0"
